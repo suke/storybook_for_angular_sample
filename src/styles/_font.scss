@@ -1,0 +1,13 @@
+$fontsize: (
+  large: (size: 26px, line: 32px, sp_size: 20px, sp_line: 28px),
+  medium: (size: 20px, line: 28px, sp_size: 17px, sp_line: 24px),
+  base: (size: 17px, line: 32px, sp_size: 17px, sp_line: 32px),
+  small: (size: 15px, line: 24px, sp_size: 12px, sp_line: 20px),
+);
+
+@each $key, $value in $fontsize {
+  .txt-#{$key} {
+    font-size: #{map-get($value, size)};
+    line-height: #{map-get($value, line)};
+  }
+}
